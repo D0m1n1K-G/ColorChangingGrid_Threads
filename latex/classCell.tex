@@ -1,0 +1,190 @@
+\hypertarget{classCell}{}\doxysection{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+
+
+Inheritance diagram for Cell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{classCell__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cell\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classCell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCell_aef0498e73d3e6de0fa89407d4ee44414}{Cell}} (int x, int y, \mbox{\hyperlink{classTorusGrid}{Torus\+Grid}} torus, double probability, int k)
+\item 
+Rectangle \mbox{\hyperlink{classCell_a805319c809313c5b644de10a7e78cf74}{get\+Rectangle}} ()
+\item 
+void \mbox{\hyperlink{classCell_a46f6ad36ee6c1561ea361414fe7203e3}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCell_ab9a7ff05e2fa97799d4729cd239efaa4}{change\+Color}} (Color color)
+\item 
+void \mbox{\hyperlink{classCell_a1bbf7184045ffa4d8fc8457ae83690cb}{update\+Color}} ()
+\item 
+Color \mbox{\hyperlink{classCell_ab7204e7d02e7e827fa6a6b884ac38281}{random\+Color}} ()
+\item 
+Color \mbox{\hyperlink{classCell_a9f1fa8e845b673cadc70875c273f854e}{average\+Color}} (Color\mbox{[}$\,$\mbox{]} colors)
+\item 
+void \mbox{\hyperlink{classCell_a68574edd242f82cc0c732b45c2923e6b}{suspend\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classCell_ab9ae3799002303c2b23749ad9de26c5e}{resume\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classCell_a51e9a0b63c6aa4f3c0a3826c9328b935}{check\+For\+Suspend}} ()  throws Interrupted\+Exception 
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCell_af50fc9a1e8a781ed02bc5721f8098117}\label{classCell_af50fc9a1e8a781ed02bc5721f8098117}} 
+final int {\bfseries x}
+\item 
+\mbox{\Hypertarget{classCell_a471d88633d6e818153d52661378388d2}\label{classCell_a471d88633d6e818153d52661378388d2}} 
+final int {\bfseries y}
+\item 
+\mbox{\Hypertarget{classCell_a5d9ee835f5c8759b0cdc695de6f0ea17}\label{classCell_a5d9ee835f5c8759b0cdc695de6f0ea17}} 
+final \mbox{\hyperlink{classTorusGrid}{Torus\+Grid}} {\bfseries torus}
+\item 
+\mbox{\Hypertarget{classCell_ac7592ca05a7c1e1838f896976f8d4c08}\label{classCell_ac7592ca05a7c1e1838f896976f8d4c08}} 
+final Rectangle {\bfseries rectangle}
+\item 
+\mbox{\Hypertarget{classCell_a540638efee54b2cdf5b8d8efb1fd1530}\label{classCell_a540638efee54b2cdf5b8d8efb1fd1530}} 
+\mbox{\hyperlink{classCell}{Cell}}\mbox{[}$\,$\mbox{]} {\bfseries neighbors}
+\item 
+\mbox{\Hypertarget{classCell_a1ce12d4a0cfdfc182500202033574ed6}\label{classCell_a1ce12d4a0cfdfc182500202033574ed6}} 
+boolean {\bfseries suspended} = false
+\item 
+\mbox{\Hypertarget{classCell_aa35f5605d315b3e7be4bc2e570db66c7}\label{classCell_aa35f5605d315b3e7be4bc2e570db66c7}} 
+final double {\bfseries probability}
+\item 
+\mbox{\Hypertarget{classCell_afad86c318970f6ec87a05e9764b3ef4a}\label{classCell_afad86c318970f6ec87a05e9764b3ef4a}} 
+final int {\bfseries k}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCell_a8b3d0c8aef5534d2d1c484166b6d26df}\label{classCell_a8b3d0c8aef5534d2d1c484166b6d26df}} 
+static final Random {\bfseries random} = new Random()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents a cell in the grid. This class is used to create a cell in the grid. Each cell is a rectangle with a random color. The color of the cell can change with a given probability. The color of the cell can be pdated based on the average color of its neighbors. The cell can be suspended and resumed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCell_aef0498e73d3e6de0fa89407d4ee44414}\label{classCell_aef0498e73d3e6de0fa89407d4ee44414}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}}
+{\footnotesize\ttfamily Cell.\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classTorusGrid}{Torus\+Grid}}}]{torus,  }\item[{double}]{probability,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The constructor of the \mbox{\hyperlink{classCell}{Cell}} class. It creates a cell in the grid. Rectangle on mouse click will suspend or resume the cell. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the cell. \\
+\hline
+{\em y} & The y-\/coordinate of the cell. \\
+\hline
+{\em torus} & The grid of cells. \\
+\hline
+{\em probability} & The probability of changing the color of the cell. \\
+\hline
+{\em k} & The value of K. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCell_a9f1fa8e845b673cadc70875c273f854e}\label{classCell_a9f1fa8e845b673cadc70875c273f854e}} 
+\index{Cell@{Cell}!averageColor@{averageColor}}
+\index{averageColor@{averageColor}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{averageColor()}{averageColor()}}
+{\footnotesize\ttfamily Color Cell.\+average\+Color (\begin{DoxyParamCaption}\item[{Color\mbox{[}$\,$\mbox{]}}]{colors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Calculate the average color of an array of colors. 
+\begin{DoxyParams}{Parameters}
+{\em colors} & The array of colors. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average color of the array of colors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCell_ab9a7ff05e2fa97799d4729cd239efaa4}\label{classCell_ab9a7ff05e2fa97799d4729cd239efaa4}} 
+\index{Cell@{Cell}!changeColor@{changeColor}}
+\index{changeColor@{changeColor}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{changeColor()}{changeColor()}}
+{\footnotesize\ttfamily void Cell.\+change\+Color (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Change the color of the cell. It locks the cell, changes the color of the cell, and unlocks the cell. 
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color of the cell. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCell_a51e9a0b63c6aa4f3c0a3826c9328b935}\label{classCell_a51e9a0b63c6aa4f3c0a3826c9328b935}} 
+\index{Cell@{Cell}!checkForSuspend@{checkForSuspend}}
+\index{checkForSuspend@{checkForSuspend}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{checkForSuspend()}{checkForSuspend()}}
+{\footnotesize\ttfamily void Cell.\+check\+For\+Suspend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Interrupted\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Check if the cell is suspended. If the cell is suspended, it waits until the cell is resumed. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Interrupted\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCell_a805319c809313c5b644de10a7e78cf74}\label{classCell_a805319c809313c5b644de10a7e78cf74}} 
+\index{Cell@{Cell}!getRectangle@{getRectangle}}
+\index{getRectangle@{getRectangle}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{getRectangle()}{getRectangle()}}
+{\footnotesize\ttfamily Rectangle Cell.\+get\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the rectangle representing the cell. \begin{DoxyReturn}{Returns}
+The rectangle representing the cell. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCell_ab7204e7d02e7e827fa6a6b884ac38281}\label{classCell_ab7204e7d02e7e827fa6a6b884ac38281}} 
+\index{Cell@{Cell}!randomColor@{randomColor}}
+\index{randomColor@{randomColor}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{randomColor()}{randomColor()}}
+{\footnotesize\ttfamily Color Cell.\+random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Generate a random color. \begin{DoxyReturn}{Returns}
+A random color. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCell_ab9ae3799002303c2b23749ad9de26c5e}\label{classCell_ab9ae3799002303c2b23749ad9de26c5e}} 
+\index{Cell@{Cell}!resumeThread@{resumeThread}}
+\index{resumeThread@{resumeThread}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{resumeThread()}{resumeThread()}}
+{\footnotesize\ttfamily void Cell.\+resume\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Resume the cell. \mbox{\Hypertarget{classCell_a46f6ad36ee6c1561ea361414fe7203e3}\label{classCell_a46f6ad36ee6c1561ea361414fe7203e3}} 
+\index{Cell@{Cell}!run@{run}}
+\index{run@{run}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Cell.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The run method of the cell. It changes the color of the cell with a given probability. It updates the color of the cell based on the average color of its neighbors. It prints the start and end of the thread. \mbox{\Hypertarget{classCell_a68574edd242f82cc0c732b45c2923e6b}\label{classCell_a68574edd242f82cc0c732b45c2923e6b}} 
+\index{Cell@{Cell}!suspendThread@{suspendThread}}
+\index{suspendThread@{suspendThread}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{suspendThread()}{suspendThread()}}
+{\footnotesize\ttfamily void Cell.\+suspend\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Suspend the cell. \mbox{\Hypertarget{classCell_a1bbf7184045ffa4d8fc8457ae83690cb}\label{classCell_a1bbf7184045ffa4d8fc8457ae83690cb}} 
+\index{Cell@{Cell}!updateColor@{updateColor}}
+\index{updateColor@{updateColor}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{updateColor()}{updateColor()}}
+{\footnotesize\ttfamily void Cell.\+update\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Update the color of the cell based on the average color of its neighbors. It locks the neighbors of the cell, gets the colors of the neighbors, and unlocks the neighbors. It calculates the average color of the neighbors and changes the color of the cell. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Cell.\+java\end{DoxyCompactItemize}

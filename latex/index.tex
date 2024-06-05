@@ -1,0 +1,26 @@
+\label{index_md_mainpage}%
+\Hypertarget{index_md_mainpage}%
+In this program we got a grid which user can provide it\textquotesingle{}s size in textfields, the probability of the cell\textquotesingle{}s color change and the speed of changes.~\newline
+ Every cell in the grid is a {\bfseries{Thread}} in which every certain period of time (the delay is equal to a randomly selected ~\newline
+ number of milliseconds from the interval \mbox{[}0.\+5k, 1.\+5k\mbox{]}) performs the following actions\+: ~\newline
+
+\begin{DoxyItemize}
+\item with probability p it changes its color to a random color;
+\item with probability 1 -\/ p checks the colors of its four neighbors (we treat the board as a two-\/dimensional track. we treat as a two-\/dimensional torus) and takes the average of them as its color.
+\end{DoxyItemize}
+
+Each cell can be suspended and resumed by clicking on it\hypertarget{index_autotoc_md1}{}\doxysection{Overview}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item \href{classMainApp.html}{\texttt{ Main\+App}} -\/ Entry point of the application.
+\begin{DoxyItemize}
+\item \href{classMainUI.html}{\texttt{ Main\+UI}} -\/ Main user interface of the application.
+\begin{DoxyItemize}
+\item \href{classTorusGrid.html}{\texttt{ Torus\+Grid}} -\/ A class that represents a grid of cells.
+\begin{DoxyItemize}
+\item \href{classCell.html}{\texttt{ Cell}} -\/ A class that represents a cell in the grid, each cell is a rectangle with a random color.
+\end{DoxyItemize}
+\item \href{classStartButton.html}{\texttt{ Start\+Button}} -\/ A class is used to create a button that it is setting the parameters of the simulation and initializes the grid. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classTorusGrid}{}\doxysection{Torus\+Grid Class Reference}
+\label{classTorusGrid}\index{TorusGrid@{TorusGrid}}
+
+
+Inheritance diagram for Torus\+Grid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classTorusGrid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Torus\+Grid\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTorusGrid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTorusGrid_a09d4904dcb0b2a7d5ba214eca1816c88}{Torus\+Grid}} (int rows, int cols)
+\item 
+void \mbox{\hyperlink{classTorusGrid_a9f3cbd9a585a2d42480c2a72500dcc49}{initialize\+Grid}} (Stage primary\+Stage, double p, int k)
+\item 
+\mbox{\hyperlink{classCell}{Cell}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classTorusGrid_a194fe79de2b0803f5eda351e6d2f5f38}{get\+Neighbors}} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTorusGrid_a0fb3492ddf5e1877536b7d90de67a1eb}\label{classTorusGrid_a0fb3492ddf5e1877536b7d90de67a1eb}} 
+final int {\bfseries row}
+\item 
+\mbox{\Hypertarget{classTorusGrid_a4025b9b43fcf63ea265ffffd47c31cf2}\label{classTorusGrid_a4025b9b43fcf63ea265ffffd47c31cf2}} 
+final int {\bfseries col}
+\item 
+\mbox{\Hypertarget{classTorusGrid_a6e777a1e7c5f39b500036af2831fd3b7}\label{classTorusGrid_a6e777a1e7c5f39b500036af2831fd3b7}} 
+\mbox{\hyperlink{classCell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} {\bfseries cells}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents a grid of cells. This class is used to create a grid of cells. Each cell is a rectangle with a random color. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTorusGrid_a09d4904dcb0b2a7d5ba214eca1816c88}\label{classTorusGrid_a09d4904dcb0b2a7d5ba214eca1816c88}} 
+\index{TorusGrid@{TorusGrid}!TorusGrid@{TorusGrid}}
+\index{TorusGrid@{TorusGrid}!TorusGrid@{TorusGrid}}
+\doxysubsubsection{\texorpdfstring{TorusGrid()}{TorusGrid()}}
+{\footnotesize\ttfamily Torus\+Grid.\+Torus\+Grid (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The constructor of the \mbox{\hyperlink{classTorusGrid}{Torus\+Grid}} class. It sets the number of rows and columns in the grid. 
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows in the grid. \\
+\hline
+{\em cols} & The number of columns in the grid. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTorusGrid_a194fe79de2b0803f5eda351e6d2f5f38}\label{classTorusGrid_a194fe79de2b0803f5eda351e6d2f5f38}} 
+\index{TorusGrid@{TorusGrid}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!TorusGrid@{TorusGrid}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCell}{Cell}}\mbox{[}$\,$\mbox{]} Torus\+Grid.\+get\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the neighbors of a cell. 
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the cell. \\
+\hline
+{\em y} & The y-\/coordinate of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The neighbors of the cell. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTorusGrid_a9f3cbd9a585a2d42480c2a72500dcc49}\label{classTorusGrid_a9f3cbd9a585a2d42480c2a72500dcc49}} 
+\index{TorusGrid@{TorusGrid}!initializeGrid@{initializeGrid}}
+\index{initializeGrid@{initializeGrid}!TorusGrid@{TorusGrid}}
+\doxysubsubsection{\texorpdfstring{initializeGrid()}{initializeGrid()}}
+{\footnotesize\ttfamily void Torus\+Grid.\+initialize\+Grid (\begin{DoxyParamCaption}\item[{Stage}]{primary\+Stage,  }\item[{double}]{p,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the grid of cells. It creates a grid of cells with a given probability and value of K. 
+\begin{DoxyParams}{Parameters}
+{\em primary\+Stage} & The primary stage of the application. \\
+\hline
+{\em p} & The probability of changing the color of the cell. \\
+\hline
+{\em k} & The value of K. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Torus\+Grid.\+java\end{DoxyCompactItemize}
