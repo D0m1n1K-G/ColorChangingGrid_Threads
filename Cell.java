@@ -1,4 +1,6 @@
 import java.util.Random;
+
+import javafx.application.Platform;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -95,7 +97,7 @@ public class Cell implements Runnable {
      */
     private void changeColor(Color color) {
         synchronized(this) {
-            rectangle.setFill(color); // Change the color of the cell 
+            Platform.runLater(() -> rectangle.setFill(color)); // Change the color of the cell 
         }
     }
 
